@@ -1,0 +1,10 @@
+18:23:42.406 INFO  AUTOMATION - beforeAll
+18:23:42.469 INFO  AUTOMATION - before: Build image puzzle
+18:23:46.697 INFO  AUTOMATION - Waiting for screen HomePage to load
+18:23:47.629 INFO  AUTOMATION - %s screen has loaded successfully
+18:23:47.630 INFO  AUTOMATION - Navigate to drag screen
+18:23:47.730 INFO  AUTOMATION - Waiting for screen DragPage to load
+18:23:48.362 INFO  AUTOMATION - %s screen has loaded successfully
+18:24:00.915 INFO  AUTOMATION - Verify congratulations screen
+18:24:05.468 INFO  AUTOMATION - after: Build image puzzle, status: PASSED
+18:24:05.747 INFO  AUTOMATION - afterAll
