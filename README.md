@@ -1,7 +1,7 @@
 # Grapefy-Appium_SkillDemo
 
 ## Overview
-Grapefy-Appium_SkillDemo is a project developed to showcase skills in Java, Appium, BDD, Cucumber, Gherkin, mobile automation, and CI/CD integration. It highlights strong capabilities in cross-platform mobile testing, test design strategies, and agile collaboration.
+"Grapefy-Appium_SkillDemo" is a project developed to showcase skills in Java, Appium, BDD, Cucumber, Gherkin, mobile automation, and CI/CD integration. It highlights strong capabilities in cross-platform mobile testing, test design strategies, and agile collaboration.
 
 ## Features
 - Built using **Appium**, **Gherkin**, and **JUnit5** for mobile BDD automation.
