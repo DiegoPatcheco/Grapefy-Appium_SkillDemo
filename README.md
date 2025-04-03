@@ -10,7 +10,7 @@ strategies, and agile collaboration.
 
 - Built using **Appium**, **Gherkin**, and **JUnit5** for mobile BDD automation.
 - Integrated with **Maven Wrapper** for simplified build and dependency management.
-- CI/CD enabled via **GitHub Actions** and **Jenkins** for automated execution.
+- CI/CD enabled via **Jenkins** for automated execution.
 - Automatically generates detailed reports using **Cucumber Reports**.
 - Includes **Cloud Testing integration with BrowserStack** for remote device execution.
 
@@ -121,8 +121,7 @@ Use the following script:
     - **GitHub Branch Source**
     - **HTML Publisher**
     - Plus other recommended plugins for optimal performance.
-- Cucumber reports and test results are uploaded as artifacts and accessible from both GitHub Actions and Jenkins
-  pipelines.
+- Cucumber reports and test results are uploaded as artifacts and accessible from Jenkins pipeline.
 
 ## Contributing
 
