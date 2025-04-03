@@ -40,7 +40,7 @@ pipeline {
 
     post {
         always {
-            // Publica el reporte HTML de Cucumber
+            // Publica el reporte HTML de Cucumber.
             publishHTML([
                 reportDir: 'target/cucumber-html-reports',
                 reportFiles: 'overview-features.html',
