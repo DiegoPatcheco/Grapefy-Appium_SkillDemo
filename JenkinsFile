@@ -40,15 +40,14 @@ pipeline {
 
     post {
         always {
-            // Publica el reporte HTML de Cucumber.
             publishHTML([
                 reportDir: 'target/cucumber-html-reports',
                 reportFiles: 'overview-features.html',
                 reportName: 'Cucumber Test Report',
+                allowMissing: false,
                 keepAll: true,
                 alwaysLinkToLastBuild: true
             ])
         }
     }
-
 }
