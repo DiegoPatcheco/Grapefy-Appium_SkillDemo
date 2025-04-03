@@ -1,0 +1,54 @@
+pipeline {
+    agent any
+
+    environment {
+        BROWSERSTACK_USERNAME = credentials('BROWSERSTACK_USERNAME')
+        BROWSERSTACK_ACCESS_KEY = credentials('BROWSERSTACK_ACCESS_KEY')
+    }
+
+    triggers {
+        githubPush()
+    }
+
+    tools {
+        maven 'Maven 3'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git url: 'https://github.com/DiegoPatcheco/Grapefy-Appium_SkillDemo.git', branch: 'main'
+            }
+        }
+
+        stage('Set Permissions') {
+            steps {
+                sh 'chmod +x runSuiteBS.sh'
+            }
+        }
+
+        stage('Run Tests on BrowserStack') {
+            steps {
+                sh '''
+                    export BROWSERSTACK_USERNAME=$BROWSERSTACK_USERNAME
+                    export BROWSERSTACK_ACCESS_KEY=$BROWSERSTACK_ACCESS_KEY
+                    ./runSuiteBS.sh
+                '''
+            }
+        }
+    }
+
+    post {
+        always {
+            // Publica el reporte HTML de Cucumber
+            publishHTML([
+                reportDir: 'target/cucumber-html-reports',
+                reportFiles: 'overview-features.html',
+                reportName: 'Cucumber Test Report',
+                keepAll: true,
+                alwaysLinkToLastBuild: true
+            ])
+        }
+    }
+
+}
