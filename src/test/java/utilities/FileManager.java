@@ -11,8 +11,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class FileManager {
-    private static final String screenshotPath = "src/test/resources/screenshots";
-    private static final String pageStructurePath = "src/test/resources/pageStructure";
+    private static final String screenshotPath = "target/screenshots";
+    private static final String pageStructurePath = "target/pageStructure";
 
     public static void getScreenshot(String screenshotName) {
         Logs.debug("Taking screenshot");

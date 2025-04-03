@@ -3,7 +3,7 @@ Feature: Drag tests
   Background: Drag tests preconditions
     Given The user navigates to the Drag screen
 
-  @regression @smoke
+  @regression @smoke @single
   Scenario: Verify Drag screen elements
     When The user verifies the Drag screen elements
 

@@ -1,19 +1,24 @@
 package utilities;
 
 import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
 
 public class DriverManager {
-    private final boolean runServer = System.getenv("JOB_NAME") != null;
+    private final boolean runOnBrowserstack =
+            "true".equalsIgnoreCase(System.getProperty("RUN_ON_BROWSERSTACK"));
 
     public void buildDriver() {
-        if (runServer) {
+        if (runOnBrowserstack) {
+            Logs.debug("RUN_ON_BROWSERSTACK is TRUE. Initializing remote driver.");
             buildRemoteDriver();
         } else {
+            Logs.debug("RUN_ON_BROWSERSTACK is FALSE. Initializing local driver");
             buildLocalDriver();
         }
     }
@@ -39,7 +44,18 @@ public class DriverManager {
     }
 
     private void buildRemoteDriver() {
+        try {
+            final var browserStackURL = "https://hub.browserstack.com/wd/hub";
+            final var mutableCapabilities = getMutableRemoteCapabilities();
 
+            Logs.debug("Initializing driver");
+            final var driver = new AndroidDriver(new URL(browserStackURL), mutableCapabilities);
+
+            Logs.debug("Assign driver to driver provider");
+            new DriverProvider().set(driver);
+        } catch (MalformedURLException malformedURLException) {
+            throw new RuntimeException(malformedURLException.getLocalizedMessage());
+        }
     }
 
     private static DesiredCapabilities getDesiredLocalCapabilities() {
@@ -54,5 +70,22 @@ public class DriverManager {
         desiredCapabilities.setCapability("appium:app", fileAPK.getAbsolutePath());
 
         return desiredCapabilities;
+    }
+
+    private static MutableCapabilities getMutableRemoteCapabilities() {
+        final var mutableCapabilities = new MutableCapabilities();
+
+        HashMap<String, String> bstackOptions = new HashMap<>();
+        bstackOptions.putIfAbsent("source", "cucumber:appium-intellij:v1.1.6");
+        bstackOptions.putIfAbsent("deviceName", "Samsung Galaxy S22 Ultra");
+        bstackOptions.putIfAbsent("platformVersion", "12.0");
+        bstackOptions.putIfAbsent("platformName", "android");
+        bstackOptions.putIfAbsent("projectName", "Grapefy");
+        bstackOptions.putIfAbsent("buildName", "run-suite build");
+        bstackOptions.putIfAbsent("appium:app", "bs://a56592460559411ef05872a72ecdb777b6ba2082");
+        bstackOptions.putIfAbsent("userName", "diegopachecoflor_fUsoOk");
+        bstackOptions.putIfAbsent("accessKey", "zGMpYr27qyMXBwGyTz1Z");
+
+        return mutableCapabilities;
     }
 }

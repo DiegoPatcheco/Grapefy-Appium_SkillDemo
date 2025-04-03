@@ -1,76 +1,14 @@
-18:23:42.406 INFO  AUTOMATION - beforeAll
-18:23:42.469 INFO  AUTOMATION - before: Build image puzzle
-18:23:42.471 DEBUG AUTOMATION - Initializing driver
-18:23:46.688 DEBUG AUTOMATION - Assign driver to driver provider
-18:23:46.697 INFO  AUTOMATION - Waiting for screen HomePage to load
-18:23:47.629 INFO  AUTOMATION - %s screen has loaded successfully
-18:23:47.630 INFO  AUTOMATION - Navigate to drag screen
-18:23:47.730 INFO  AUTOMATION - Waiting for screen DragPage to load
-18:23:48.362 INFO  AUTOMATION - %s screen has loaded successfully
-18:23:48.477 DEBUG AUTOMATION - Move finger to origin
-18:23:48.477 DEBUG AUTOMATION - Press finger
-18:23:48.478 DEBUG AUTOMATION - Hold finger 1s
-18:23:48.478 DEBUG AUTOMATION - Move finger to destiny
-18:23:48.478 DEBUG AUTOMATION - Hold finger 1s
-18:23:48.478 DEBUG AUTOMATION - Release finger
-18:23:48.478 DEBUG AUTOMATION - Perform action
-18:23:49.937 DEBUG AUTOMATION - Move finger to origin
-18:23:49.937 DEBUG AUTOMATION - Press finger
-18:23:49.937 DEBUG AUTOMATION - Hold finger 1s
-18:23:49.937 DEBUG AUTOMATION - Move finger to destiny
-18:23:49.937 DEBUG AUTOMATION - Hold finger 1s
-18:23:49.937 DEBUG AUTOMATION - Release finger
-18:23:49.937 DEBUG AUTOMATION - Perform action
-18:23:51.385 DEBUG AUTOMATION - Move finger to origin
-18:23:51.385 DEBUG AUTOMATION - Press finger
-18:23:51.385 DEBUG AUTOMATION - Hold finger 1s
-18:23:51.385 DEBUG AUTOMATION - Move finger to destiny
-18:23:51.385 DEBUG AUTOMATION - Hold finger 1s
-18:23:51.385 DEBUG AUTOMATION - Release finger
-18:23:51.385 DEBUG AUTOMATION - Perform action
-18:23:52.836 DEBUG AUTOMATION - Move finger to origin
-18:23:52.836 DEBUG AUTOMATION - Press finger
-18:23:52.836 DEBUG AUTOMATION - Hold finger 1s
-18:23:52.836 DEBUG AUTOMATION - Move finger to destiny
-18:23:52.836 DEBUG AUTOMATION - Hold finger 1s
-18:23:52.836 DEBUG AUTOMATION - Release finger
-18:23:52.836 DEBUG AUTOMATION - Perform action
-18:23:54.285 DEBUG AUTOMATION - Move finger to origin
-18:23:54.285 DEBUG AUTOMATION - Press finger
-18:23:54.285 DEBUG AUTOMATION - Hold finger 1s
-18:23:54.285 DEBUG AUTOMATION - Move finger to destiny
-18:23:54.285 DEBUG AUTOMATION - Hold finger 1s
-18:23:54.285 DEBUG AUTOMATION - Release finger
-18:23:54.285 DEBUG AUTOMATION - Perform action
-18:23:55.736 DEBUG AUTOMATION - Move finger to origin
-18:23:55.736 DEBUG AUTOMATION - Press finger
-18:23:55.737 DEBUG AUTOMATION - Hold finger 1s
-18:23:55.737 DEBUG AUTOMATION - Move finger to destiny
-18:23:55.737 DEBUG AUTOMATION - Hold finger 1s
-18:23:55.737 DEBUG AUTOMATION - Release finger
-18:23:55.737 DEBUG AUTOMATION - Perform action
-18:23:57.191 DEBUG AUTOMATION - Move finger to origin
-18:23:57.191 DEBUG AUTOMATION - Press finger
-18:23:57.191 DEBUG AUTOMATION - Hold finger 1s
-18:23:57.191 DEBUG AUTOMATION - Move finger to destiny
-18:23:57.191 DEBUG AUTOMATION - Hold finger 1s
-18:23:57.191 DEBUG AUTOMATION - Release finger
-18:23:57.191 DEBUG AUTOMATION - Perform action
-18:23:58.640 DEBUG AUTOMATION - Move finger to origin
-18:23:58.640 DEBUG AUTOMATION - Press finger
-18:23:58.640 DEBUG AUTOMATION - Hold finger 1s
-18:23:58.640 DEBUG AUTOMATION - Move finger to destiny
-18:23:58.640 DEBUG AUTOMATION - Hold finger 1s
-18:23:58.640 DEBUG AUTOMATION - Release finger
-18:23:58.640 DEBUG AUTOMATION - Perform action
-18:24:00.083 DEBUG AUTOMATION - Move finger to origin
-18:24:00.083 DEBUG AUTOMATION - Press finger
-18:24:00.083 DEBUG AUTOMATION - Hold finger 1s
-18:24:00.083 DEBUG AUTOMATION - Move finger to destiny
-18:24:00.083 DEBUG AUTOMATION - Hold finger 1s
-18:24:00.083 DEBUG AUTOMATION - Release finger
-18:24:00.083 DEBUG AUTOMATION - Perform action
-18:24:00.915 INFO  AUTOMATION - Verify congratulations screen
-18:24:05.468 INFO  AUTOMATION - after: Build image puzzle, status: PASSED
-18:24:05.468 DEBUG AUTOMATION - Killing driver
-18:24:05.747 INFO  AUTOMATION - afterAll
+01:00:23.824 INFO  AUTOMATION - beforeAll
+01:00:23.893 INFO  AUTOMATION - before: Verify Drag screen elements
+01:00:23.893 DEBUG AUTOMATION - RUN_ON_BROWSERSTACK is TRUE. Initializing remote driver.
+01:00:23.894 DEBUG AUTOMATION - Initializing driver
+01:00:58.224 DEBUG AUTOMATION - Assign driver to driver provider
+01:00:58.528 INFO  AUTOMATION - Waiting for screen HomePage to load
+01:00:59.116 INFO  AUTOMATION - %s screen has loaded successfully
+01:00:59.117 INFO  AUTOMATION - Navigate to drag screen
+01:00:59.455 INFO  AUTOMATION - Waiting for screen DragPage to load
+01:01:00.323 INFO  AUTOMATION - %s screen has loaded successfully
+01:01:00.406 INFO  AUTOMATION - Verify drag page elements
+01:01:07.786 INFO  AUTOMATION - after: Verify Drag screen elements, status: PASSED
+01:01:07.786 DEBUG AUTOMATION - Killing driver
+01:01:09.255 INFO  AUTOMATION - afterAll
